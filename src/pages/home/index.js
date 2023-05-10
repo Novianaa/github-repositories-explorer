@@ -8,19 +8,19 @@ import EmptyState from '../../assets/No-data-cuate.png'
 import { useDispatch, useSelector } from 'react-redux';
 import GetUsers from '../../redux/actions/users'
 import { useState } from 'react';
-import GetRepo from '../../redux/actions/repo'
-import { useNavigate } from 'react-router-dom';
+// import GetRepo from '../../redux/actions/repo'
+// import { useNavigate } from 'react-router-dom';
 // import BeforeInput from '../../components/BeforeInput';
 
 const Home = (props) => {
   let { data, loading } = useSelector((s) => s.users)
-  let { repo } = useSelector((s) => s.repo)
+  // let { repo } = useSelector((s) => s.repo)
   const dispatch = useDispatch()
   const [inputUser, setInputUser] = useState('')
   const [query, setQuery] = useState({})
-  const [username, setUsername] = useState('')
+  // const [username, setUsername] = useState('')
   const [Refetch, setRefetch] = useState();
-  const navigate = useNavigate()
+  // const navigate = useNavigate()
 
   useEffect(() => {
     dispatch(GetUsers(query))
@@ -34,11 +34,6 @@ const Home = (props) => {
     e.preventDefault()
     setQuery(inputUser)
     setRefetch(true)
-  }
-  console.log('ss', data.items.repos_url)
-  const handleRepoPage = (value) => {
-    setUsername({ username: value })
-    navigate('/repo', { state: { username } })
   }
 
   switch (!inputUser) {
@@ -96,7 +91,7 @@ const Home = (props) => {
                             <img src={dataUser.avatar_url} alt='avatar' className='wrapper-img-avatar' />
                             <div className="wrapper-user-right">
                               <div className="wrapper-name">{dataUser.login}</div>
-                              <button className="wrapper-btn-detail" value={dataUser.repos_url} onClick={value => handleRepoPage(value)}>Detail repositories</button>
+                              <button className="wrapper-btn-detail" value={dataUser.repos_url} >Detail repositories</button>
                             </div>
                           </div>
 
