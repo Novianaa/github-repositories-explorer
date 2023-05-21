@@ -7,13 +7,11 @@ main {
 }
 
 section {
-  /* margin: 3% 2%; */
   background-color: white;
   padding: 3%;
 }
 
 .wrapper-header {
-  background-color: white;
   padding: 0 0 3% 0;
 }
 
@@ -115,5 +113,84 @@ section {
   margin: 2% 0;
   background-color: rgb(255, 255, 255);
   box-shadow: #95949469 2px 5px 5px;
+
+}
+
+.name-repo {
+  font-family: 'Mulish';
+  font-size: 16px;
+
+
+}
+
+.btn-repo {
+  text-decoration: none;
+  background-color: #4b89fccc;
+  padding: 4% 10%;
+  border-radius: 8px;
+  font-family: 'Mulish';
+  font-size: 16px;
+  color: #ffffff;
+}
+
+@media (max-width: 576px) {
+  section {
+    padding: 4%;
+  }
+
+  .text-header {
+    font-size: 18px;
+  }
+
+  .input-form {
+    height: 30px;
+    border-radius: 8px;
+    border: #a0a0a08c 1.5px solid;
+  }
+
+  .btn-search {
+    height: 30px;
+    border-radius: 8px;
+    box-shadow: #4d4d4d4d 1px 4px 6px;
+  }
+
+  .logo-search {
+    width: 24px;
+  }
+
+  .text-search {
+    font-family: 'Mulish';
+    font-weight: 400;
+    font-size: 15px;
+  }
+
+  .img-search {
+    width: 100%;
+  }
+
+  .empty-logo {
+    width: 100%;
+  }
+
+  .wrapper-data-user-detail {
+    width: 100%;
+    margin: 2%;
+    padding: 3%;
+    display: flex;
+    border: #36363690 1px solid;
+    box-shadow: #4d4d4d4d 1px 5px 8px;
+
+  }
+
+  .wrapper-name {
+    font-size: 20px;
+  }
+
+  .wrapper-btn-detail {
+    border-radius: 8px;
+    padding: 1% 4%;
+    font-size: 16px;
+  }
+
 
 }
